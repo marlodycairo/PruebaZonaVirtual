@@ -1,0 +1,84 @@
+﻿@model IEnumerable<PruebaZonaVirtual.Models.HttpClientModel>
+
+  @{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div>
+    <p>Datos de la consulta al servicio</p>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.comercio_codigo)</th>
+                <th>@Html.DisplayNameFor(model => model.comercio_nombre)</th>
+                <th>@Html.DisplayNameFor(model => model.comercio_nit)</th>
+                <th>@Html.DisplayNameFor(model => model.comercio_direccion)</th>
+                <th>@Html.DisplayNameFor(model => model.Trans_codigo)</th>
+                <th>@Html.DisplayNameFor(model => model.Trans_medio_pago)</th>
+                <th>@Html.DisplayNameFor(model => model.Trans_estado)</th>
+                <th>@Html.DisplayNameFor(model => model.Trans_total)</th>
+                <th>@Html.DisplayNameFor(model => model.Trans_fecha)</th>
+                <th>@Html.DisplayNameFor(model => model.Trans_concepto)</th>
+                <th>@Html.DisplayNameFor(model => model.usuario_identificacion)</th>
+                <th>@Html.DisplayNameFor(model => model.usuario_nombre)</th>
+                <th>@Html.DisplayNameFor(model => model.usuario_email)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.comercio_codigo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.comercio_nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.comercio_nit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.comercio_direccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Trans_codigo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Trans_medio_pago)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Trans_estado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Trans_total)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Trans_fecha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Trans_concepto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.usuario_identificacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.usuario_nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.usuario_email)
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+
